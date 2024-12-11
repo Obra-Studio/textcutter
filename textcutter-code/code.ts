@@ -295,7 +295,9 @@ async function main(): Promise<string | undefined> {
     let nodeParent = node.parent
 
     // This regex splits multiline string into multiple lines and puts it in an array
-    let result = inputText.split(/\r?\n/);
+
+    // Potentially U+2029 (\u2029): Paragraph Separator and U+0085 (\u0085): Next Line could be added to the regex
+    let result = inputText.split(/[\r\n\u2028]/);
 
     // Remove only trailing empty lines, keep empty lines in between
     while (result.length > 0 && result[result.length - 1].trim() === '') {

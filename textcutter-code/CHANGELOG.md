@@ -1,3 +1,7 @@
+## 3.5.0
+
+* Add support for line breaks with unicode character u2028 (line separator). This line break type appears when copy pasting, for example, code from the IntelliJ IDE (and probably more software packages) 
+
 ## 3.4.0
 
 * Improve remove bullets to remove Figma-created bullets. When you type the asterisk character, Figma will create a “list” of which you can also set up the list spacing. In previous versions, we only removed bullet-like characters (like •). Now we also remove Figma-created bullets.
